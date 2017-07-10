@@ -5,7 +5,7 @@ Apocalyptica
 
 [Apocalypse World](http://apocalypse-world.com) is a great game by Vincent Baker. This bot makes playing the game online easier by providing a dice-roller that also outputs the details of a hit or miss:
 
-![Example Usage](https://www.dropbox.com/s/s7t9lx639z03zeb/example.png?)
+![Example Usage](img/example.png)
 
 ### Usage
 ```
