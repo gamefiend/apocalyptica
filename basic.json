@@ -1,0 +1,66 @@
+[ 
+    { 
+        "Name": "!goaggro",
+        "Full": "Go Aggro on Someone",
+        "Miss": "Going aggro is a bust!",
+        "Hit": "Your opponent chooses 1:\n* get the hell out of your way\n* barricade themselves securely in\n* give you something they think you want\n* back off calmly, hands where you can see\n* tell you what you want to know (or what you want to hear)",
+        "Crit": "Your opponent can either: force your hand and suck it up, or cave and do what you want."
+       },
+
+    {
+        "Name": "!readsitch",
+        "Full": "Read a Sitch",
+        "Miss": "You can't get a read on what's going on...",
+        "Hit": "**Ask the MC 1 of these questions**:\n* where’s my best escape route / way in / way past?\n* which enemy is most vulnerable to me?\n* which enemy is the biggest threat?\n* what should I be on the lookout for?\n* what’s my enemy’s true position?\n* who’s in control here?",
+        "Crit": "**Ask the MC 3 of these questions**:\n* where’s my best escape route / way in / way past?\n* which enemy is most vulnerable to me?\n* which enemy is the biggest threat?\n* what should I be on the lookout for?\n* what’s my enemy’s true position?\n* who’s in control here?"
+    },  
+    {
+        "Name": "!openbrain",
+        "Full": "Open Your Brain to Psychic Maelstrom",
+        "Miss": "You open your brain to static. ***Prepare for the Worst.***",
+        "Hit": "The MC **gives you an impression** of something new and interesting about the current situation, and might ask you a question or two; answer them. If you know all there is to know, the MC will tell you.",
+        "Crit": "The MC provides **great detail** about something new and interesting about the current situation, and might ask you a question or two; answer them. If you know all there is to know, the MC will tell you."
+    },
+    {
+        "Name": "!readperson",
+        "Full": "Read a Person",
+        "Miss": "**ask these questions of the character, but prepare for the worst**:\n* Is your character telling the truth?\n* What’s your character really feeling?\n* What does your character intend to do?\n* What does your character wish I’d do?\n* How could I get your character to __?\n",
+        "Hit": "hold 1. **While you are interacting with the character, spend hold 1 for 1 to ask these questions**:\n* Is your character telling the truth?\n* What’s your character really feeling?\n* What does your character intend to do?\n* What does your character wish I’d do?\n* How could I get your character to __?\n",
+        "Crit": "hold 3. **While you are interacting with the character, spend hold 1 for 1 to ask these questions**:\n* Is your character telling the truth?\n* What’s your character really feeling?\n* What does your character intend to do?\n* What does your character wish I’d do?\n* How could I get your character to __?\n"
+    },
+    {
+        "Name": "!help",
+        "Full": "Help Someone",
+        "Miss": "Your efforts to help have gone awry. ***Prepare for the Worst.***",
+        "Hit": "The person you help takes **+1 to their roll**",
+        "Crit": "The person you help takes **+2 to their roll**"
+    },
+    {
+        "Name": "!interfere",
+        "Full": "Interfere with Someone",
+        "Miss": "Your efforts to interfere have gone awry. ***Prepare for the Worst.***",
+        "Hit": "The person you interfere with takes **-1 to their roll**",
+        "Crit": "The person you interfere with takes **-2 to their roll**"
+    },
+    {
+        "Name": "!underfire",
+        "Full": "Do Something Under Fire",
+        "Miss": "You falter under fire. ***Be prepared for the worst***",
+        "Hit": "You flinch, hesitate or stall: the MC **can offer you a worse outcome or an ugly choice.**",
+        "Crit": "You do it."
+    },
+    {
+        "Name": "!seducenpc",
+        "Full": "Seduce or Manipulate an NPC",
+        "Miss": "Your trickery fails. ***Prepare for the worst.***",
+        "Hit": "They’ll go along with you, but they need some concrete assurance, corroboration, or evidence first.",
+        "Crit": "They'll go along with you, unless or until some fact or action betrays the reason you gave them."
+    },
+    {
+        "Name": "!seducepc",
+        "Full": "Seduce or Manipulate an PC",
+        "Miss": "Your trickery fails. ***Prepare for the worst.***",
+        "Hit": "**Choose one:**\n* If they go along with you, they mark experience.\n* If they refuse, erase one of their stat highlights for the remainder of the session.\n* *What they do is up to them.*",
+        "Crit": "**Both are true**\n* If they go along with you, they mark experience.\n* If they refuse, erase one of their stat highlights for the remainder of the session.\n* *What they do is up to them.*"
+    }
+]
