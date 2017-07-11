@@ -52,14 +52,14 @@
     {
         "Name": "!seducenpc",
         "Full": "Seduce or Manipulate an NPC",
-        "Miss": "Your trickery fails. ***Prepare for the worst.***",
+        "Miss": "Your trickery fails. ***Prepare for the Worst.***",
         "Hit": "They’ll go along with you, but they need some concrete assurance, corroboration, or evidence first.",
         "Crit": "They'll go along with you, unless or until some fact or action betrays the reason you gave them."
     },
     {
         "Name": "!seducepc",
         "Full": "Seduce or Manipulate a PC",
-        "Miss": "Your trickery fails. ***Prepare for the worst.***",
+        "Miss": "Your trickery fails. ***Prepare for the Worst.***",
         "Hit": "**Choose one:**\n* If they go along with you, they mark experience.\n* If they refuse, erase one of their stat highlights for the remainder of the session.\n* *What they do is up to them.*",
         "Crit": "**Both are true**\n* If they go along with you, they mark experience.\n* If they refuse, erase one of their stat highlights for the remainder of the session.\n* *What they do is up to them.*"
     }
