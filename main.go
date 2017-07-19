@@ -5,11 +5,13 @@ import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
 	"github.com/gamefiend/apocalyptica/moves"
+	"net/http"
 	"os"
 	"os/signal"
 	"regexp"
 	"strconv"
 	"strings"
+	"sync"
 	"syscall"
 	"time"
 )
@@ -21,6 +23,14 @@ var (
 var Apoc = moves.LoadMoves()
 var ApocList = MakeList(Apoc)
 var Announce = make(map[string]bool)
+
+type ApocMsg struct {
+	Message string
+}
+
+func (am *ApocMsg) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Write([]byte("Message: " + am.Message))
+}
 
 func MakeList(mv moves.Move) []string {
 	l := make([]string, 0)
@@ -52,42 +62,6 @@ func getBonus(s string) int {
 	return bns
 }
 
-func init() {
-	flag.StringVar(&Token, "t", "", "Bot Token")
-	flag.Parse()
-}
-
-func main() {
-
-	// new discord session with the provided bot token.
-	dg, err := discordgo.New("Bot " + Token)
-	if err != nil {
-		fmt.Println("error creating Discord session,", err)
-	}
-
-	// Register the messageCreate func for a callbackto MessageCreate events
-	dg.AddHandler(messageCreate)
-	dg.AddHandler(onReady)
-	// listen on that websocket connection!
-	err = dg.Open()
-	if err != nil {
-		fmt.Println("Error opening connection,", err)
-		return
-	}
-
-	//wait until we get Ctl-C/term signal
-	fmt.Println("Loading Moves")
-	fmt.Println("Apocalyptica is Barfing into your channel now...")
-	fmt.Println("Press Ctl-C to exit.")
-	sc := make(chan os.Signal, 1)
-	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
-
-	<-sc
-
-	dg.Close()
-
-}
-
 // Addhandler fires this up when Apocalyptica connects to another channel.
 func onReady(s *discordgo.Session, m *discordgo.Ready) {
 	greetings := "**Apocalyptica**. Apocalypse World 2e bot. !!help for instructions, !moves for moves."
@@ -104,7 +78,6 @@ func onReady(s *discordgo.Session, m *discordgo.Ready) {
 			}
 		}
 	}
-	// s.ChannelMessageSend(m.ChannelID, greetings)
 }
 
 // Addhandler sends a message to this function any time a message on a channel this bot is listening to is created.
@@ -142,4 +115,50 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			fmt.Println(m.ChannelID, d)
 		}
 	}
+}
+
+func init() {
+	flag.StringVar(&Token, "t", "", "Bot Token")
+	flag.Parse()
+}
+
+func main() {
+	var wg sync.WaitGroup
+	//launch a small web server
+	mux := http.NewServeMux()
+	am := &ApocMsg{Message: "Barfing forth Apocalyptica"}
+	go func() {
+		mux.Handle("/", am)
+		fmt.Printf("listening on port 8080")
+		http.ListenAndServe(":8080", mux)
+	}()
+	// new discord session with the provided bot token.
+	dg, err := discordgo.New("Bot " + Token)
+	if err != nil {
+		fmt.Println("error creating Discord session,", err)
+	}
+
+	// Register the messageCreate func for a callbackto MessageCreate events
+	dg.AddHandler(messageCreate)
+	dg.AddHandler(onReady)
+	// listen on that websocket connection!
+	err = dg.Open()
+	if err != nil {
+		fmt.Println("Error opening connection,", err)
+		return
+	}
+
+	//wait until we get Ctl-C/term signal
+	fmt.Println(
+		`Loading Moves...
+Apocalyptica is Barfing into your channel now...
+Press Ctl-C to exit.`)
+	wg.Add(1)
+	sc := make(chan os.Signal, 1)
+	signal.Notify(sc, syscall.SIGINT, syscall.SIGTERM, os.Interrupt, os.Kill)
+	signals := <-sc
+	dg.Close()
+	fmt.Println("recieved ", signals)
+	fmt.Println("Stopping....")
+	wg.Done()
 }

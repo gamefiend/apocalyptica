@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"math/rand"
 	"os"
+	"regexp"
 	"strings"
 	"time"
 )
@@ -68,7 +69,12 @@ func FindMove(s string, mv Move) Move {
 	var Found Move
 	substr := strings.Split(s, " ")
 	for _, v := range mv {
-		if strings.Contains(v.Name, substr[0]) {
+		r, err := regexp.Compile(v.Name)
+		if err != nil {
+			fmt.Printf("Problematic regexp, failing.\n")
+			os.Exit(1)
+		}
+		if r.MatchString(substr[0]) == true {
 			Found = append(Found, v)
 		}
 	}
