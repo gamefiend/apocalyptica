@@ -20,12 +20,17 @@ type Roll interface {
 //grabs the nanosecond as a seed
 func seed() int64 {
 	now := time.Now()
-	return now.Unix()
+	return now.UnixNano()
 }
 
 func (m Move) Roll(bonus int) int {
+	//roll the first d6, +1 since Intn is 0 based
 	rand.Seed(seed())
-	return ((rand.Intn(10)) + 2) + bonus
+	d1 := (rand.Intn(6) + 1)
+	//reset the seed, then roll the second d6, +1 since Intn is 0 based
+	rand.Seed(seed())
+	d2 := (rand.Intn(6) + 1)
+	return (d1 + d2 + bonus)
 }
 
 func (m Move) Display(r, bonus int) string {
