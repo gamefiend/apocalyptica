@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"math/rand"
 	"os"
 	"regexp"
@@ -54,12 +55,12 @@ func LoadMoves() Move {
 	var mv Move
 	file, e := ioutil.ReadFile("basic.json")
 	if e != nil {
-		fmt.Printf("File error: %v\n", e)
+		log.Printf("File error: %v\n", e)
 		os.Exit(1)
 	}
 	r := bytes.NewReader(file)
 	if e := json.NewDecoder(r).Decode(&mv); e != nil {
-		fmt.Printf("Problems decoding json: %v\n", e)
+		log.Printf("Problems decoding json: %v\n", e)
 		os.Exit(1)
 	}
 	return mv

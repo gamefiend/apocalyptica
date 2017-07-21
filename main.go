@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
 	"github.com/gamefiend/apocalyptica/moves"
+	"log"
 	"net/http"
 	"os"
 	"os/signal"
@@ -17,20 +18,12 @@ import (
 )
 
 var (
-	Token string
+	Intro = flag.Bool("intro", false, "Channel Introductions")
 )
 
 var Apoc = moves.LoadMoves()
 var ApocList = MakeList(Apoc)
 var Announce = make(map[string]bool)
-
-type ApocMsg struct {
-	Message string
-}
-
-func (am *ApocMsg) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Message: " + am.Message))
-}
 
 func MakeList(mv moves.Move) []string {
 	l := make([]string, 0)
@@ -65,16 +58,16 @@ func getBonus(s string) int {
 // Addhandler fires this up when Apocalyptica connects to another channel.
 func onReady(s *discordgo.Session, m *discordgo.Ready) {
 	greetings := "**Apocalyptica**. Apocalypse World 2e bot. !!help for instructions, !moves for moves."
-
+	log.Printf("Invited to %s servers\n", len(m.Guilds))
 	for _, i := range m.Guilds {
-		fmt.Printf("%+v\n", i)
+		log.Printf("CONNECT [%s]\n", i.Name)
 		// Wait for a few seconds to finish connection, otherwise we miss info.
 		time.Sleep(2 * time.Second)
 		for _, c := range i.Channels {
-			fmt.Printf("\t%+v\n", c)
-			if c.Type == "text" {
+			log.Printf("%s.%s [%s]\n", i.Name, c.Name, c.ID)
+			if c.Type == "text" && *Intro == true {
 				s.ChannelMessageSend(c.ID, greetings)
-				fmt.Printf("Introducing myself in Guild %s Channel %s\n", i.Name, c.Name)
+				fmt.Printf("%s.%s Introduction\n", i.Name, c.Name)
 			}
 		}
 	}
@@ -112,30 +105,41 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			result := moveMsg.Roll(bonus)
 			d := moveMsg.Display(result, bonus)
 			s.ChannelMessageSend(m.ChannelID, d)
-			fmt.Println(m.ChannelID, d)
+			log.Println(m.ChannelID, m.Author.ID, moveMsg, result, bonus)
 		}
 	}
 }
 
 func init() {
-	flag.StringVar(&Token, "t", "", "Bot Token")
 	flag.Parse()
 }
 
 func main() {
 	var wg sync.WaitGroup
+	//Grab Token from the Environment
+	Token := os.Getenv("DISCORD_TOKEN")
+	if len(Token) == 0 {
+		fmt.Println("environment variable DISCORD_TOKEN not set")
+		os.Exit(1)
+	}
 	//launch a small web server
-	mux := http.NewServeMux()
-	am := &ApocMsg{Message: "Barfing forth Apocalyptica"}
+
 	go func() {
-		mux.Handle("/", am)
-		fmt.Printf("listening on port 8080")
-		http.ListenAndServe(":8080", mux)
+		s, e := os.Getwd()
+		if e != nil {
+			log.Println("Can't access working directory", e)
+		}
+		httpwd := fmt.Sprintf("%s/static", s)
+		fmt.Println(httpwd)
+		fs := http.FileServer(http.Dir(httpwd))
+		http.Handle("/", fs)
+		log.Printf("listening on port 8080")
+		http.ListenAndServe(":8080", nil)
 	}()
 	// new discord session with the provided bot token.
 	dg, err := discordgo.New("Bot " + Token)
 	if err != nil {
-		fmt.Println("error creating Discord session,", err)
+		log.Println("error creating Discord session,", err)
 	}
 
 	// Register the messageCreate func for a callbackto MessageCreate events
