@@ -17,20 +17,17 @@ type Roll interface {
 	Display() string
 }
 
-//grabs the nanosecond as a seed
-func seed() int64 {
+func die(dieType int) int {
 	now := time.Now()
-	return now.UnixNano()
+	//now.Unix() seems to return seconds, so all die rolls in the same second
+	// would be seeded the same.  UnixNano() returns a much more fine grained value
+	rand.Seed(now.UnixNano())
+	//'Roll' the die, +1 since Intn is 0 based
+	return (rand.Intn(dieType)+ 1)
 }
 
 func (m Move) Roll(bonus int) int {
-	//roll the first d6, +1 since Intn is 0 based
-	rand.Seed(seed())
-	d1 := (rand.Intn(6) + 1)
-	//reset the seed, then roll the second d6, +1 since Intn is 0 based
-	rand.Seed(seed())
-	d2 := (rand.Intn(6) + 1)
-	return (d1 + d2 + bonus)
+	return (die(6) + die(6) + bonus)
 }
 
 func (m Move) Display(r, bonus int) string {
