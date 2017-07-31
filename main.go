@@ -21,7 +21,7 @@ var (
 	Intro = flag.Bool("intro", false, "Channel Introductions")
 )
 
-var Apoc = moves.LoadMoves()
+var Apoc = moves.LoadMoves("basic.json")
 var ApocList = MakeList(Apoc)
 var Announce = make(map[string]bool)
 
