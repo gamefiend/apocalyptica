@@ -1,0 +1,9 @@
+[ 
+    { 
+        "Name": "!healingtouch",
+        "Full": "Healing Touch",
+        "Miss": "You heal nothing. Both you and the person you lied to about healing have to openbrain except you've already missed the roll",
+        "Hit": "You put some guts back, heal 1 segment but you gotta openbrain now and hope the Pyschic Maelstrom plays nice.",
+        "Crit": "You put lots of guts back. heal 1 segment."
+       },
+]
