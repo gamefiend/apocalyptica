@@ -53,9 +53,9 @@ type Move []struct {
 	Crit string `json:"Crit"`
 }
 
-func LoadMoves() Move {
+func LoadMoves(filename string) Move {
 	var mv Move
-	file, e := ioutil.ReadFile("basic.json")
+	file, e := ioutil.ReadFile(filename)
 	if e != nil {
 		log.Printf("File error: %v\n", e)
 		os.Exit(1)
