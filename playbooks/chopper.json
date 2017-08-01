@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Name": "!packalpha",
+        "Full": "Pack Alpha",
+        "Miss": "Someone in your gang makes a bid, idle or serious, to replace you for alpha. Are you going to take that?",
+        "Hit": "Choose 1. They do what you want, they don't fight back over it, you don't have to make an example of one of them.",
+        "Crit": "Take everything. They do what you want, you don't get any lip, and you dn't have to make an example out of anyone."
+       },
+
+    {
+        "Name": "!fuckingthieves",
+        "Full": "Fucking Thieves",
+        "Miss": "You know, you had that thing. Too bad some asswipe stole it from you.",
+        "Hit": "One of you happens to have soemthing pretty close, unless it's hi-tech then no dice.",
+        "Crit": "One of you have the thing, or close enough that it doesn't matter."
+    },  
+]
