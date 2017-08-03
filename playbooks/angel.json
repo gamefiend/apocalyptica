@@ -6,4 +6,11 @@
         "Hit": "You put some guts back, heal 1 segment but you gotta openbrain now and hope the Pyschic Maelstrom plays nice.",
         "Crit": "You put lots of guts back. heal 1 segment."
        },
+       { 
+        "Name": "!kit",
+        "Full": "Angel Kit - Stabalize at 9:00 or past",
+        "Miss": "That shoudn't spurt like that. You deal 1-harm to your patient.",
+        "Hit": "**They're okay, for now. Put them back to 6:00 and choose 1**:\n* They fight you and you have to narco stab them. How long will they be out?\n* The pain and drugs make them babble the truth to you. Ask them what secret they spill.\n* They respond well to the treatment. Recover 1 of the stock you spent, if you spent any.\n* They are at your complete mercy. What do you do to them?\n* Their course of recovery teaches you something about your craft. Mark experience.\n* They owe you for your time, attention, and supplies, and you're going to hold them to it. ",
+        "Crit": "**They're okay, for now. Put them back to 6:00 and choose 2**:\n* They fight you and you have to narco stab them. How long will they be out?\n* The pain and drugs make them babble the truth to you. Ask them what secret they spill.\n* They respond well to the treatment. Recover 1 of the stock you spent, if you spent any.\n* They are at your complete mercy. What do you do to them?\n* Their course of recovery teaches you something about your craft. Mark experience.\n* They owe you for your time, attention, and supplies, and you're going to hold them to it."
+       },
 ]
