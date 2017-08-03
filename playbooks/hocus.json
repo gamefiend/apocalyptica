@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Name": "!fortunes",
+        "Full": "Fortunes",
+        "Miss": "Your followers are in want. They look to you to aid to provide succor.",
+        "Hit": "Your followers have a surplus! Yay! They also have a want. Boo.",
+        "Crit": "Your followers have a surplus! Everyone is happy-ish! If it's barter, then that's your share as the leader and soothsayer to your followers as is only right."
+       },
+
+    {
+        "Name": "!frenzy",
+        "Full": "Frenzy",
+        "Miss": "They look amongst themselves, and then turn on you.",
+        "Hit": "Hold 1. Spend a hold 1 for 1 to make the mob:\n* Bring people forward and deliver them\n* Bring forward all their precious things\n* Unite and fight for you as a gang (2-harm 0-armor size appropriate)\n* Fall into an orgy of uninhibited emotion: fucking, lamenting, fighting, sharing, celebrating, as you choose\n* Go quietly back to their lives",
+        "Crit": "Hold 3. Spend a hold 1 for 1 to make the mob:\n* Bring people forward and deliver them\n* Bring forward all their precious things\n* Unite and fight for you as a gang (2-harm 0-armor size appropriate)\n* Fall into an orgy of uninhibited emotion: fucking, lamenting, fighting, sharing, celebrating, as you choose\n* Go quietly back to their lives"
+    },  
+]

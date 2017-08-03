@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Name": "!leadership",
+        "Full": "Leadership",
+        "Miss": "They're going to do it, but you're going to hear about it later. ",
+        "Hit": "They do what you command.",
+        "Crit": "Battlefield voice makes them snap to; they do what you want and take +1forward doing it ma'amsirma'am."
+       },
+
+    {
+        "Name": "!wealth",
+        "Full": "Wealth",
+        "Miss": "You don't have enough. What you want depends on your holding.",
+        "Hit": "You have a surplus in one area, but a want in another",
+        "Crit": "You have surplus at hand and available for needs of the session. They build a monument in your honor (not really, no)."
+    },  
+]

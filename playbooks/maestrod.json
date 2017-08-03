@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Name": "!everybodyeats",
+        "Full": "Everbody eats, even that guy",
+        "Miss": "Ask the MC 1 question about someone, but that person knows you're looking in on them",
+        "Hit": "Ask the MC 1 question.\n* How are they doing? what's up with them?\n* What or who do they love best\n* Who do they know, like and/or trust?\n* When next should I expect to see them?\n* How could I get to them, physically or emotionally?",
+        "Crit": "Ask the MC 3 questions.\n* How are they doing? what's up with them?\n* What or who do they love best\n* Who do they know, like and/or trust?\n* When next should I expect to see them?\n* How could I get to them, physically or emotionally?"
+       },
+
+    {
+        "Name": "!motive",
+        "Full": "Just give me a motive",
+        "Miss": "Not very discriminating are you? The MC chooses several people (maybe your target, maybe not) and they get it. It being 3-harm (ap)",
+        "Hit": "Someone's going to be feeling bad. Your target suffers 2-harm (ap) in the next 24 hours.",
+        "Crit": "You really don't like them. Your target's insides are slowly turning to mush. They take 4-harm (ap) in the next 24 hours."
+    },  
+]

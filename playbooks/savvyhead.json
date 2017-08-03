@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Name": "!thingsspeak",
+        "Full": "Things Speak",
+        "Miss": "This is what happens when you play with the Psychich Maelstrom. It plays with your head. Open your brain, but you've already missed the roll",
+        "Hit": "Ask the MC 1 question.\n* Who handled this last befor me?\n* Who made this?\n* What strong emotions have been most recently nearby this?\n* What words have been said most recently nearby this?\n* What has been done most recently with this, or to this?\n* What's wrong with this, and how might I fix it?",
+        "Crit": "Ask the MC 3 questions.\n* Who handled this last befor me?\n* Who made this?\n* What strong emotions have been most recently nearby this?\n* What words have been said most recently nearby this?\n* What has been done most recently with this, or to this?\n* What's wrong with this, and how might I fix it?"
+       },
+
+    {
+        "Name": "!bonefeel",
+        "Full": "Bonefeel",
+        "Miss": "The MC holds 1 and can spend it to have you be there already, but somehow pinned, caught or trapped.",
+        "Hit": "Hold 1. You or the MC can spend that to have you already be where you need to be with proper tools and knowledge without any clear explanation why. Take +1forward now",
+        "Crit": "Hold 1. You or the MC can spend that to have you already be where you need to be with proper tools and knowledge without any clear explanation why. Take +1forward now."
+    },  
+]
