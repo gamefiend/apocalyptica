@@ -39,7 +39,6 @@ func getBonus(s string) int {
 	result := make(map[string]string)
 	if match == nil {
 		return 0
-		fmt.Printf("no bonus")
 	}
 	for i, name := range reg.SubexpNames() {
 		if i != 0 {
@@ -49,7 +48,6 @@ func getBonus(s string) int {
 	fmt.Printf("bonus is %+v\n", result["bonus"])
 	bns, e := strconv.Atoi(result["bonus"])
 	if e != nil {
-		fmt.Print("problem getting bonus: %v\n", e)
 		return 0
 	}
 	return bns
@@ -105,7 +103,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			result := moveMsg.Roll(bonus)
 			d := moveMsg.Display(result, bonus)
 			s.ChannelMessageSend(m.ChannelID, d)
-			log.Println(m.ChannelID, m.Author.ID, moveMsg, result, bonus)
+			log.Println(m.ChannelID, m.Author.ID, result, bonus)
 		}
 	}
 }
