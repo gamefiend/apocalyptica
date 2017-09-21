@@ -1,0 +1,17 @@
+[ 
+    { 
+        "Name": "!eyeonthedoor",
+        "Full": "Eye On the Door",
+        "Miss": "You're caught vulnerable, half in and half out",
+        "Hit": "You can go, or stay, but if you go it will cost you: leave something behind or take something with you, the MC will tell you what.",
+        "Crit": "Your gone. Puff of smoke, like real magic shit."
+       },
+
+    {
+        "Name": "!reputation",
+        "Full": "Reputation",
+        "Miss": "They've heard of you all right. The MC will tell you what they heard. Probably nothing good cho'.",
+        "Hit": "They've heard of you, and you say what they've heard; the MC will make them respond accordingly.",
+        "Crit": "They've heard of you, and you say what they've heard; the MC will make them respond accordingly, and you get +1forward for dealing with them."
+    },  
+]

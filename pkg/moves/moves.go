@@ -24,7 +24,7 @@ func die(dieType int) int {
 	// would be seeded the same.  UnixNano() returns a much more fine grained value
 	rand.Seed(now.UnixNano())
 	//'Roll' the die, +1 since Intn is 0 based
-	return (rand.Intn(dieType)+ 1)
+	return (rand.Intn(dieType) + 1)
 }
 
 func (m Move) Roll(bonus int) int {

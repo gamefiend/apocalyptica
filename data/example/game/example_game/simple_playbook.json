@@ -1,0 +1,9 @@
+[ 
+    { 
+        "Name": "!simple",
+        "Full": "Do Something Simple.",
+        "Miss": "Your move is too simple and flops.",
+        "Hit": "Your move is just simple enough to get things going.",
+        "Crit": "Simplicity is just what we needed! You cut through the fog."
+       }
+]

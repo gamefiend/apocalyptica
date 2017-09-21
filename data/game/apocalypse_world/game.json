@@ -1,0 +1,32 @@
+{
+  "Game":
+  {
+    "Name": "Apocalypse World",
+    "Description": "This is what we've got, yes. What are you going to make of it?",
+    "Playbooks": [
+      { 
+        "Name": "The Angel",
+        "Moves": "angel.json" 
+      },
+      {
+        "Name": "The Battlebabe",
+        "Moves": "battlebabe.json" 
+      },
+      { 
+        "Name": "The Brainer", 
+        "Moves": "brainer.json"
+      },
+      { "Name": "The Chopper",
+        "Moves": "chopper.json" 
+      },
+      { 
+        "Name": "The Driver",
+        "Moves": "driver.json" 
+      },
+      { 
+        "Name": "The Gunlugger",
+        "Moves": "gunlugger.json"
+      }
+    ]
+  }
+}

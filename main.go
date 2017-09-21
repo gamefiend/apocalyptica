@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/bwmarrin/discordgo"
-	"github.com/gamefiend/apocalyptica/moves"
+	"github.com/gamefiend/apocalyptica/pkg/moves"
 	"log"
 	"net/http"
 	"os"

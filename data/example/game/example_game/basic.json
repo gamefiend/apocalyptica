@@ -1,0 +1,9 @@
+[ 
+    { 
+        "Name": "!doit",
+        "Full": "Do it!",
+        "Miss": "You missed!",
+        "Hit": "You get to do most of what you want",
+        "Crit": "You do everything you want and then some."
+    }
+]

@@ -1,0 +1,18 @@
+[ 
+    "Playbook": "The BattleBabe",
+    { 
+        "Name": "!dangeroussexy",
+        "Full": "Dangerous & Sexy",
+        "Miss": "Your enemies identify you immediately as their foremost threat!",
+        "Hit": "Hold 1. Spend 1 hold to: \n* make eye contact with an NPC present, who freezes or flinches and can't take action until you break it off.",
+        "Crit": "Hold 2. Spend 1 hold to: \n* make eye contact with an NPC present, who freezes or flinches and can't take action until you break it off."
+       },
+
+    {
+        "Name": "!visionsofdeath",
+        "Full": "Visions of Death",
+        "Miss": "You forsee your own death, and take -1 throughout the battle",
+        "Hit": "Name one NPC who'll die OR one NPC who'll live. The MC will make your visions come true, if it's even remotely possible",
+        "Crit": "Name one person who'll die OR one person who'll live"
+    },  
+]
