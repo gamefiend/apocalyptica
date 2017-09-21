@@ -1,0 +1,44 @@
+/*
+ * 1. BASICS
+ */
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  background: #efefef;
+}
+
+body {
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman', serif;
+  font-size: 1.1em;
+  margin:0 auto;
+  max-width: 50em;
+  background-color: white;
+  padding:1em;
+}
+/*
+ *2. Type
+ */
+h1, h2{
+  font-family: 'Cinzel', serif;
+}
+
+h1{
+  font-size: 3em;
+  margin:0 0 0.5em 0;
+}
+
+p{
+  line-height: 1.5;
+}
+
+kbd{
+  border: 1px solid #bbc;
+  background-color: #efefef;
+  border-radius: 2px;
+  padding:0 0.3em;
+  line-height: inherit;
+  color: #333;
+}
