@@ -21,17 +21,25 @@ body {
 /*
  *2. Type
  */
-h1, h2{
+h1, h2, h3{
   font-family: 'Cinzel', serif;
 }
 
 h1{
   font-size: 3em;
   margin:0 0 0.5em 0;
+  line-height: 1;
+}
+
+h2{
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
+  line-height: 1;
 }
 
 p{
   line-height: 1.5;
+  margin: 0 0 1.5em 0
 }
 
 kbd{
@@ -41,4 +49,46 @@ kbd{
   padding:0 0.3em;
   line-height: inherit;
   color: #333;
+}
+
+a:link {
+  color:rgb(232, 51, 53);
+}
+
+a:visited {
+  color: #666;
+}
+
+a:hover, a:active, a:focus{
+  color: rgb(158, 35, 36);
+}
+
+/*
+ * 3.
+ */
+
+a.btn{
+  padding: 0.5em 0.7em;
+
+  background: rgb(232, 51, 53);
+  border-radius: 5px;
+
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: background-color 0.5s;
+}
+
+a.btn:hover, a.btn:focus, a.btn:active{
+  background: rgb(158, 35, 36);
+
+}
+
+.btn svg{
+  display: inline-block;
+  width:1em;
+  height:1em;
+  vertical-align: middle;
+  fill: currentColor;
 }
