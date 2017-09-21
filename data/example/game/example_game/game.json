@@ -1,0 +1,13 @@
+{
+  "Game":
+  {
+    "Name": "Example Game",
+    "Description": "A game to serve as an example.",
+    "Playbooks": [
+      { 
+        "Name": "Simple Character",
+        "Moves": "simple_playbook.json" 
+      }
+    ]
+  }
+}

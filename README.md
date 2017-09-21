@@ -15,18 +15,15 @@ Apocalyptica
 !<move> <bonus> - rolls and displays move results.
 ```
 
+
+### Use it Now
+
+Want to try an instance of Apocalyptica on your server? [Try it now](https://apocalyptica.social-fiction.net).
+
+### Roll Your Own
+
+If you want to use your own server, you will first need to [register your app](docs/register.md), then look at the [different ways you can deploy](docs/deploying.md) to Apocalyptica.
+
 #### Adding your own moves.  
 
-Add your own moves by modifying basic.json.
-
-### Installation
-You will need to use the instructions for setting up a bot in Discord. When you have a token, you can build the code then run it like so:
-```
-apocalyptica -t <TOKEN>
-```
-You will then need to invite it to your server.
-
-### Apocalyptica in the wild.
-
-Right now I'm testing a general use server. I'll provide a link to it when it is ready for public use.
-
+Add your own moves by adding [your own games and playbooks](docs/game-playbook.md)

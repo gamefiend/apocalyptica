@@ -1,0 +1,4 @@
+#!/bin/bash
+docker build -t apocalyptica-custom \
+&& docker run --name apocalyptica --rm --env-file -p8080:8080 ../.env -d apocalyptica-cu
+stom
