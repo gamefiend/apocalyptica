@@ -1,0 +1,8 @@
+hash: 3c058d1701f5af9b832c624e8490e19fcc8009c3fcd11902a0034d69f70abb51
+updated: 2017-10-03T21:34:45.501143-04:00
+imports:
+- name: github.com/bwmarrin/discordgo
+  version: 2fda7ce223a66a5b70b66987c22c3c94d022ee66
+- name: github.com/matryer/moq
+  version: cc6b1a47faa71a50960a3b75e409d5ffaa5d6df4
+testImports: []

@@ -2,6 +2,7 @@
   "Game":
   {
     "Name": "Example Game",
+    "Author": "Example Person",
     "Description": "A game to serve as an example.",
     "Playbooks": [
       { 

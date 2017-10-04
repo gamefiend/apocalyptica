@@ -2,3 +2,4 @@ package: github.com/gamefiend/apocalyptica
 import:
 - package: github.com/bwmarrin/discordgo
   version: ^0.16.0
+- package: github.com/matryer/moq

@@ -13,7 +13,7 @@ import (
 	"time"
 )
 
-type Roll interface {
+type roll interface {
 	Roll() int
 	Display() string
 }
@@ -53,6 +53,7 @@ type Move []struct {
 	Crit string `json:"Crit"`
 }
 
+// this is going to move over to
 func LoadMoves(filename string) Move {
 	var mv Move
 	file, e := ioutil.ReadFile(filename)
