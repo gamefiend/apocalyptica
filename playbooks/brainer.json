@@ -2,7 +2,7 @@
     {
         "Name": "!deepbrain",
         "Full": "Deep Brain Scan",
-        "Miss": "All you do is hurt people, they inflice 1-harm (ap) upon your subject.",
+        "Miss": "All you do is hurt people, they inflict 1-harm (ap) upon your subject.",
         "Hit": "**Hold 1, spend your hold 1 for 1 to ask a question**: \n* What was your character's lowest moment?\n* For what does your character crave forgivness, and of whom?\n* What are your character's secret pains?\n* In what ways are your character's mind and soul vulnerable?",
         "Crit": "**Hold 3, spend your hold 1 for 1 to ask a question**: \n* What was your character's lowest moment?\n* For what does your character crave forgivness, and of whom?\n* What are your character's secret pains?\n* In what ways are your character's mind and soul vulnerable?"
     },  
@@ -10,7 +10,7 @@
     {
         "Name": "!puppetstrings",
         "Full": "In-brain puppet strings",
-        "Miss": "All you do is hurt people, they inflice 1-harm (ap) upon your subject.",
+        "Miss": "All you do is hurt people, they inflict 1-harm (ap) upon your subject.",
         "Hit": "**Hold 1. If they fullfill the command, all your holds are spent. Until then, At your will, no matter the circumstances, you can spend your hold 1 for 1**: \n* Inflict 1-harm (ap)\n* They take -1 right now",
         "Crit": "**Hold 3. If they fullfill the command, all your holds are spent. Until then, At your will, no matter the circumstances, you can spend your hold 1 for 1**: \n* Inflict 1-harm (ap)\n* They take -1 right now"
     },  
