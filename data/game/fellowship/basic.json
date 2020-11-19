@@ -1,0 +1,51 @@
+[
+    {
+        "Name": "!finish",
+        "Full": "Finish them! (any stat)",
+        "Miss": "You lose Advantage and **face retaliation**.",
+        "Hit": "You deal damage to a stat that makes sense & lose Advantage.\n**If an ally was Keeping Them Busy**, they aren't anymore.",
+        "Crit": "You **destroy them** - tell us what that means."
+    },
+        {
+        "Name": "!overcome",
+        "Full": "Overcome! (Blood)",
+        "Miss": "You fail to overcome the harm & **the harm happens** unimpeded",
+        "Hit": "You can **Pay a Price** for full success,\nor you can **create a temporary solution** which delays the threat.",
+        "Crit": "You **stop the obstacle**, threat, cut, or Move from causing harm."
+    },
+        {
+        "Name": "!keepbusy",
+        "Full": "Keep them busy! (Courage)",
+        "Miss": "Keeping them busy is a bust!",
+        "Hit": "You can only stall them for a **short time**, and they will **retaliate against you** when time is up.\n**While you Keep Them Busy**, you create an Advantage for someone else.\nMark ammo if using a weapon with Ammo",
+        "Crit": "You buy **as much time as you need**, and their attention is all on you.\n**While you Keep Them Busy**, you create an Advantage for someone else.\nMark ammo if using a weapon with Ammo"
+    },
+        {
+        "Name": "!getaway",
+        "Full": "Get away! (Grace)",
+        "Miss": "Getting away was a bust!",
+        "Hit": "**Choose one:**\n* You get there quickly, avoiding any harm along the way.\n* You get there quietly, drawing no attention.\n* You grab someone nearby and bring them along with you.",
+        "Crit": "**Choose two:**\n* You get there quickly, avoiding any harm along the way.\n* You get there quietly, drawing no attention.\n* You grab someone nearby and bring them along with you."
+    },
+        {
+        "Name": "!talksense",
+        "Full": "Talk sense! (Grace/Sense/Wisdom)",
+        "Miss": "**They choose one**:\n* The favor you must do is expensive, difficult, or demeaning.\n* They cannot do what you ask of them, and will tell you why.",
+        "Hit": "**They do as you ask**, to the best of their ability.\nHowever, you **owe them a favor**.\n The more you ask of them, the more they'll ask of you, and they can cash in **at any time**.",
+        "Crit": "**They do as you ask** to the best of their ability, no favor required."
+    },
+        {
+        "Name": "!lookclosely",
+        "Full": "Look closely! (Sense)",
+        "Miss": "**Ask one** (Anyone can answer, Overlord has final say):\n* What is going on here? What do my senses tell me?\n* Is something hidden or out of place? If so, what looks suspicious?\n* Tell me about ____. How could it hurt me? How could it help me?\n* Tell me about ____. What are they doing? What will they do next?\n* What will happen if I ____?",
+        "Hit": "**Ask two** (Anyone can answer, Overlord has final say):\n* What is going on here? What do my senses tell me?\n* Is something hidden or out of place? If so, what looks suspicious?\n* Tell me about ____. How could it hurt me? How could it help me?\n* Tell me about ____. What are they doing? What will they do next?\n* What will happen if I ____?",
+        "Crit": "**Ask three** (Anyone can answer, Overlord has final say):\n* What is going on here? What do my senses tell me?\n* Is something hidden or out of place? If so, what looks suspicious?\n* Tell me about ____. How could it hurt me? How could it help me?\n* Tell me about ____. What are they doing? What will they do next?\n* What will happen if I ____?"
+    },
+        {
+        "Name": "!speaksoftly",
+        "Full": "Speak softly! (Wisdom)",
+        "Miss": "**Ask one**:\n* What can they tell us about ____?\n* What were tehy doing, and what are they going to do next?\n* What should I be wary of when dealing with them? What do they want, and how could we help them get it?\n* What would they have us do next?",
+        "Hit": "**Ask two**:\n* What can they tell us about ____?\n* What were tehy doing, and what are they going to do next?\n* What should I be wary of when dealing with them? What do they want, and how could we help them get it?\n* What would they have us do next?",
+        "Crit": "**Ask three**:\n* What can they tell us about ____?\n* What were tehy doing, and what are they going to do next?\n* What should I be wary of when dealing with them? What do they want, and how could we help them get it?\n* What would they have us do next?"
+    }
+]
